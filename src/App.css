@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -35,11 +37,15 @@ body {
 
 .form {
     display: grid;
-    grid-template: 40px 40px / 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    align-content: center;
+    justify-content: center;
 }
 
-.form--input {
+.form--input {  
     font-family: "Karla", sans-serif;
     border-radius: 5px;
     border: 1px solid #D5D4D8;
@@ -61,5 +67,6 @@ main {
 }
 
 .meme--image {
-    max-width: 100%;
+    grid-column: 1 / -1;
+    width: 100%;
 }
